@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href='./static/css/main.css' />
+    <title>List of Products</title>
+  </head>
+  <body>
+    <h1>Products</h1>
+    <ul>
+      {% for d in data %}
+        <div class="product-tile">
+            <h3> {{ d.title }}</h3>
+            <img src="{{ d.thumbnail }}" alt="Product Name">
+            <p> {{ d.description }}</p>
+            <button>Add to Cart</button>
+        </div>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
