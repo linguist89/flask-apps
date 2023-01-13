@@ -1,5 +1,11 @@
-body{
-    text-align: -webkit-center;
+.main-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    padding: 5%;
+}
+h1 {
+    text-align: center;
+    font: 10em;
 }
 .product-tile {
     display: flex;
@@ -9,8 +15,7 @@ body{
     background-color: #f5f5f5;
     border-radius: 8px;
     box-shadow: 0px 0px 10px #ccc;
-    max-width: 250px;
-    margin-bottom: 2%;
+    margin: 2%;
 }
 
 .product-tile img {
@@ -22,14 +27,14 @@ body{
 
 .product-tile h3 {
     margin-top: 8px;
-    font-size: 24px;
+    font-size: 1.8rem;
     text-align: center;
     font-weight: bold;
 }
 
 .product-tile p {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.2rem;
     margin-bottom: 16px;
     line-height: 1.5;
 }
@@ -41,6 +46,20 @@ body{
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.2rem;
     margin-top: auto;
+}
+
+/* Grid layout for tablets */
+@media (max-width: 768px) {
+    .main-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+/* Grid layout for phones */
+@media (max-width: 480px) {
+.main-grid {
+    grid-template-columns: 1fr;
+}
 }

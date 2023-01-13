@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Products</h1>
-    <ul>
+    <div class="main-grid">
       {% for d in data %}
         <div class="product-tile">
             <h3> {{ d.title }}</h3>
@@ -15,6 +15,6 @@
             <button>Add to Cart</button>
         </div>
       {% endfor %}
-    </ul>
+    </div>
   </body>
 </html>
